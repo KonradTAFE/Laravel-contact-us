@@ -10,7 +10,6 @@ class Topic extends Model
      * Mass assignable attributes (table fields)
      *
      */
-
     protected $fillable = [
         'name',
         'description',
@@ -25,12 +24,9 @@ class Topic extends Model
 
     /**
      * Attribute (type) casting
+     *
      */
     protected function casts(): array{
-        return [
-
-        ];
+        return [];
     }
-
-
 }

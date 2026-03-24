@@ -13,15 +13,16 @@ class TopicSeeder extends Seeder
      */
     public function run(): void
     {
+
         $seedTopics = [
             [
-                'id' => 1,
+                'id'=>1,
                 'name' => 'general',
-                'description' => 'General contact message',
+                'description' => 'General contact messages',
                 'available' => true,
             ],
             [
-                'id' => 100,
+                'id'=>100,
                 'name' => 'website errors',
                 'description' => 'Website errors',
                 'available' => true,
@@ -36,10 +37,12 @@ class TopicSeeder extends Seeder
                 'description' => 'Client feedback (positive and negative)',
                 'available' => true,
             ],
+
         ];
 
-        foreach ($seedTopics as $seedTopic) {
+        foreach($seedTopics as $seedTopic){
             Topic::create($seedTopic);
         }
+
     }
 }
