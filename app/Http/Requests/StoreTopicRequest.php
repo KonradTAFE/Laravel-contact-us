@@ -27,4 +27,13 @@ class StoreTopicRequest extends FormRequest
             'available'=> ['required', 'boolean'],
         ];
     }
+
+    protected function prepareForValidation(): void
+    {
+        if (!$this->filled('available')) {
+            $this->merge([
+                'available' => false,
+            ]);
+        }
+    }
 }
